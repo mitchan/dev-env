@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+sudo pacman -Sy \
+  docker \
+  docker-compose \
+  fd \
+  fzf \
+  lua51 \
+  luarocks \
+  neovim \
+  openssh \
+  tmux \
+  tree-sitter-cli \
+  xclip \
+  zoxide \
+  zsh
+
