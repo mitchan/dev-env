@@ -28,18 +28,33 @@ execute() {
   "$@"
 }
 
-log "------- dev-env -------"
-
 copy_dir() {
   to=$2
 
   pushd $1
   dirs=$(find . -mindepth 1 -maxdepth 1 -type d)
   for dir in $dirs; do
-    execute rm -rf $to/$1/$dir
-    execute cp -r $dir $to/$1/$dir
+    execute rm -rf $to/$dir
+    execute cp -r $dir $to/$dir
   done
   popd
 }
 
-copy_dir .config $HOME
+copy_file() {
+    from=$1
+    to=$2
+    name=$(basename $from)
+    execute rm $to/$name 
+    execute cp $from $to/$name
+}
+
+
+log "------- dev-env -------"
+
+copy_dir .config $HOME/.config
+
+copy_file .bashrc $HOME
+copy_file .gitconfig $HOME
+copy_file .gitconfig-work $HOME
+copy_file .wezterm.lua $HOME
+copy_file .zshrc $HOME
