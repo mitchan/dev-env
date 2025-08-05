@@ -52,9 +52,13 @@ copy_file() {
 log "------- dev-env -------"
 
 copy_dir .config $HOME/.config
+copy_dir .local $HOME/.local
 
 copy_file .bashrc $HOME
 copy_file .gitconfig $HOME
 copy_file .gitconfig-work $HOME
 copy_file .wezterm.lua $HOME
 copy_file .zshrc $HOME
+
+# reload hyprloand
+hyprctl reload
