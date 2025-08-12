@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
-sudo pacman -Sy \
+sudo pacman -Sy --noconfirm \
   dbeaver \
   discord \
   docker \
   docker-compose \
+  eza \
   fd \
   fzf \
-  hypridle \
-  hyprlock \
-  hyprpaper \
   lua51 \
   luarocks \
   neovim \
@@ -19,7 +17,6 @@ sudo pacman -Sy \
   tmux \
   tree-sitter-cli \
   ttf-font-awesome \
-  waybar \
   xclip \
   zoxide \
   zsh

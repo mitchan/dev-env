@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+sudo pacman -Sy --noconfirm \
+  hypridle \
+  hyprland \
+  hyprlock \
+  hyprpaper \
+  swaync \
+  waybar
