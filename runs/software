@@ -8,6 +8,10 @@ sudo pacman -Sy --noconfirm \
   eza \
   fd \
   fzf \
+  hypridle \
+  hyprlock \
+  hyprpaper \
+  hyprpicker \
   lua51 \
   luarocks \
   neovim \
